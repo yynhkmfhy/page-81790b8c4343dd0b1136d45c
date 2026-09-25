@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+    
+    
+    
+	
+    
+	
+    
+	
+    
+    
+    <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: none; }
+
+:root{
+--bg1: transparent linear-gradient(-120deg, #5970dd 0%, #92a4f7 100%) 0% 0% no-repeat padding-box;
+--bg1_on: transparent linear-gradient(-120deg, #9ee0bd 0%, #8ffafe 100%) 0% 0% no-repeat padding-box;
+--txt_black:#1f1f1f;
+}
+body{-webkit-text-size-adjust:none;-webkit-text-size-adjust:none; font-size:16px;background: #fff; color: #111 }
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #eee;
+}
+.txt_bg{text-transform: uppercase;
+position: relative;
+background-image:-webkit-linear-gradient(left,#8ffafe,#aafdd1,#8ffafe 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: masked-animation 5s forwards linear infinite;}
+
+@keyframes masked-animation {
+	from {
+	background-position:0 0
+}
+to {
+	background-position:-200% 0
+}}
+
+.txt_bg0{
+	 background: transparent linear-gradient(90deg, #92f1bf 0%, #8ffafe 100%) 0% 0% no-repeat padding-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #041318;
+}
+
+a > h1, a > h2, a > h3, a > h4, a > h5, a > h6 {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+p{ margin:0px; padding:0px}
+
+a {
+ color: #1f1f1f;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; display: inline-block; 
+}
+
+a:hover, a:focus, a:active, a:visited {
+  text-decoration: none;
+  outline: none; }
+
+
+a{ text-decoration:none}
+dl, ol, ul {margin: 0; padding: 0px}
+
+li{ list-style:none}
+.space1{ overflow:hidden; clear:both; height:10px; width:100%}
+.space2{ overflow:hidden; clear:both; height:20px; width:100%}
+.space3{ overflow:hidden; clear:both; height:30px; width:100%}
+.space4{ overflow:hidden; clear:both; height:40px; width:100%}
+.space_kong{ overflow:hidden; clear:both; height:120px; width:100%}
+.space_kong1{ overflow:hidden; clear:both; height:88px; width:100%}
+
+
+@media only screen and (max-width:1200px) {
+.space_kong1{ overflow:hidden; clear:both; height:66px; width:100%}
+}
+
+@media only screen and (max-width:1050px) {
+.space_kong{ overflow:hidden; clear:both; height:80px; width:100%}
+.space_kong1{ overflow:hidden; clear:both; height:60px; width:100%}
+
+
+.space2{ overflow:hidden; clear:both; height:10px; width:100%}
+.space3{ overflow:hidden; clear:both; height:10px; width:100%}
+.space4{ overflow:hidden; clear:both; height:20px; width:100%}
+}
+
+.wrap_k{width:100%; padding:100px 0px 100px 0px; overflow:hidden; }
+
+@media only screen and (max-width:1400px) {
+.wrap_k{width:100%; padding:60px 0px 60px 0px; overflow:hidden; }
+}
+
+@media only screen and (max-width:1050px) {
+.wrap_k{width:100%; padding:30px 0px 30px 0px; overflow:hidden; }
+}
+
+
+.hui_bg{ background:#5970dd; width:100%; padding:100px 0px 100px 0px; overflow:hidden; }
+.bai_bg{ background:#fff; width:100%; padding:100px 0px 100px 0px; overflow:hidden; }
+@media only screen and (max-width: 1400px) {
+.bai_bg{ background:#fff; width:100%; padding:80px 0px 80px 0px; overflow:hidden; }
+.hui_bg{ background:#5970dd; width:100%; padding:80px 0px 80px 0px; overflow:hidden; }
+}
+
+@media only screen and (max-width:1190px) {
+.bai_bg{ background:#fff; width:100%; padding:40px 0px 40px 0px; overflow:hidden; }
+.hui_bg{ background:#5970dd; width:100%; padding:40px 0px 40px 0px; overflow:hidden; }
+}
+
+@media only screen and (max-width:900px) {
+.bai_bg{ background:#fff; width:100%; padding:30px 0px 30px 0px; overflow:hidden; }
+.hui_bg{ background:#5970dd; width:100%; padding:30px 0px 30px 0px; overflow:hidden;}
+}
+
+.main_box{ height:auto; max-width:1500px; width:94%; margin:0 auto; overflow: hidden}
+@media only screen and (max-width:1600px) {	
+.main_box{ height:auto; max-width:1400px; width:94%; margin:0 auto; overflow: hidden}	
+}
+
+.actGotop{position:fixed;_position:absolute;bottom:60px;right:2%;width:40px;height:40px;display:none; z-index:999999;background: #5258cc; border-radius: 40px;text-align:center; }
+.actGotop a,.actGotop a:link{width:40px;height:40px;text-align:center;color: #fff;display: inline}
+.actGotop a:hover{outline:none;}
+.actGotop i{color: #fff;font-size:22px; line-height: 40px;}
+.actGotop:hover{ color: #f08555;background: #fcbc2e;} 
+	
+	
+.main_bg{ margin:0; padding: 0px; overflow: hidden;}
+
+.xy_vpn_top_box{padding:20px 0px;margin:0; overflow: hidden; }
+
+.xy_vpn_L{padding: 0px;margin:0; overflow: hidden;float: left;}
+.xy_vpn_L img{height: 52px; width: auto; vertical-align: top}
+
+.xy_vpn_R{padding: 0px;margin:0; overflow: hidden;float: right;}
+.top_logon{background:#ef7950;width: 160px;text-align: center; line-height: 60px; font-size: 18px; color: #fff; border-radius: 20px;font-weight: 700;display: inline-block}
+.top_logon:hover{background:#d96740; color: #fff}
+
+.t_pc_btn{width: 160px; line-height: 56px;font-weight: 700; font-size: 18px; color: #ef7950;display: inline-block; margin: 0px 10px;border-radius: 20px;text-align: center}
+.t_pc_btn:hover{ background:#ef7950;color: #fff;}
+
+
+
+.xy_m_bg::after{background:#fef9f5 ;content: ""; width: 100%; height: 100px; bottom: 0; left:0; z-index:-1; position: absolute}
+
+.main_txt_box{padding: 0px; overflow: hidden;max-width: 860px; margin: 0 auto;  padding-top: 6%}
+.main_txt_box dl {padding: 0px;margin:0; overflow: hidden;}
+.main_txt_box dl dt{padding: 0px;margin:0; overflow: hidden; text-align: center; margin-bottom: 20px}
+.main_txt_box dl dt h3{margin: 0px; padding: 0px; font-size: 60px;font-weight: 700;letter-spacing: 2px; line-height: 150%; color: #020a3b}
+.main_txt_box dl dd{padding: 0px;margin:0; overflow: hidden; color: #020a3b; font-size: 20px;font-weight: 700; line-height: 180%}
+
+.main_sm_L{padding: 0px;margin:0; overflow: hidden;float: left; position: absolute; z-index:22;height: 100%; width: 50%}
+.main_sm_L dl{padding: 0px;margin:0; overflow: hidden; position: absolute; top: 50%;
+-webkit-transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+transform: translateY(-50%); width: 100%;}
+.main_sm_L dl dt{padding: 0px;margin:0; overflow: hidden; margin-bottom: 25px}
+.main_sm_L dl dt H3{margin: 0px; padding: 0px; font-size: 80px;font-weight: 700;letter-spacing: 2px; line-height: 150%; color: #020a3b}
+.main_sm_L dl dt H1{margin: 0px; padding: 0px; font-size: 50px;font-weight: 700;letter-spacing: 2px; line-height: 150%; color: #020a3b}
+
+@keyframes masked-animation {
+	from {
+	background-position:0 0
+}
+to {
+	background-position:-200% 0
+}
+}
+
+
+.main_sm_L dl dd{padding: 0px;margin:0; overflow: hidden;font-size: 22px;  color: #020a3b;font-weight: 700; line-height: 180%}
+
+.main_sm_R{padding: 0px;margin:0; overflow: hidden;float: right;width: 44%; position: relative}
+.main_sm_R img{max-width: 100%;height: auto; vertical-align: top;}
+.btn_xz_k{padding: 0px;overflow: hidden; width:220px;line-height: 66px;}
+.btn_xz_k a{display: inline}
+.btn_xz{ text-align: center;font-size: 20px; border-radius: 20px;font-weight: 700;background:#5258cc; color:#fff}
+.btn_xz span{vertical-align: middle;  margin-right: 5px }
+.btn_xz span img{ width: 32px; height: auto; -webkit-filter: invert(0%); filter: invert(0%); margin-top: 15px; vertical-align: top  }
+.btn_xz:hover{background:#343aa2}
+
+
+.my_tu1{width: 100%; height: 100%; margin: 0px; padding: 0px; position: relative; z-index: 10;animation: myfirst1 2s infinite;}
+.my_tu1 img{width: 100%;height: auto; vertical-align: top;top:0 }
+
+.my_tu2{width: 100%; height: 100%; margin:0px; padding: 0px; position: absolute;z-index: 11;float:left;top: 0px;animation: myfirst2 2s infinite;}
+.my_tu2 img{width: 100%;height: auto; vertical-align: top}
+
+.my_tu3{width: 100%; height: 100%; margin:0px; padding: 0px; position: absolute; z-index: 12;float: left;top: 0px;}
+.my_tu3 img{width: 100%;height: auto; vertical-align: top}
+
+.my_tu4{width: 100%; height: 100%; margin:0px; padding: 0px; position: absolute; z-index: 13;float: left;top: 0px;animation: myfirst4 3s infinite;}
+.my_tu4 img{width: 100%;height: auto; vertical-align: top}
+
+ @keyframes myfirst1 {
+0% {
+ transform: translate(0px, 0px);
+}
+ 50% {
+ transform: translate(0px, -15px);
+}
+ 100% {
+ transform: translate(0px, 0px);
+}
+}
+ @keyframes myfirst2 {
+0% {
+ transform: translate(0px, 0px);
+}
+ 50% {
+ transform: translate(0px, -10px);
+-webkit-transform: scale(1.1);transform: scale(1.1);-moz-transform: scale(1.1);
+}
+ 100% {
+ transform: translate(0px, 0px);
+-webkit-transform: scale(1.0);transform: scale(1.0);-moz-transform: scale(1.0);
+}
+}
+
+
+
+
+
+ @keyframes myfirst3{
+0% {
+ transform: translate(0px, 0px);
+}
+ 50% {
+ transform: translate(30px, -10px);
+}
+ 100% {
+ transform: translate(0px, 0px);
+}
+}
+
+
+ @keyframes myfirst4{
+0% {
+ transform: translate(0px, 0px);
+}
+ 50% {
+ transform: translate(0px, -6px);
+}
+ 100% {
+ transform: translate(0px, 0px);
+}
+}
+
+
+
+
+@media only screen and (max-width:1500px) {
+	.main_sm_L dl dt H3{font-size: 60px;}
+	.main_sm_L dl dd{font-size: 20px; }
+}
+
+
+@media only screen and (max-width:1300px) {
+.main_sm_L dl dd{font-size: 18px; }
+.top_logon{width: 120px;line-height: 40px; font-size: 16px; border-radius: 10px;}
+.t_pc_btn{width: 120px; line-height: 38px;border: 1px #99fced solid;font-size: 16px;border-radius: 10px;}
+	
+.main_txt_box dl dt h3{font-size: 50px;}
+.main_txt_box dl dd{font-size: 18px;}
+
+}
+
+
+@media only screen and (max-width:1200px) {
+.main_sm_L dl dt H3{font-size: 50px;}
+.xy_vpn_L img{height: 45px;}	
+	.btn_xz_k{padding: 0px;overflow: hidden; width:160px;line-height: 42px; border-radius: 10px;}
+	.btn_xz{font-size: 16px;}
+	.btn_xz span img{ margin-top: 8px; width:22px;}
+	.main_sm_L dl dt{margin-bottom:5px}
+.main_sm_L dl dd{font-size: 16px; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);}
+}
+@media only screen and (max-width:1100px) {
+.main_txt_box dl dt h3{font-size: 40px;}
+.main_txt_box dl dd{font-size: 16px;}
+	.t_pc_btn{display: none}
+}
+@media only screen and (max-width:950px) {
+.main_sm_L dl dt H3{font-size: 40px;}
+.main_sm_L dl dd{font-size: 16px; font-weight: normal}
+.main_sm_L{width: 56%}
+.main_sm_R{width: 42%}
+}
+
+@media only screen and (max-width:680px) {
+.main_txt_box dl dt h3{font-size: 30px;}
+.top_logon{width: 100px}
+.main_sm_L{width: 100%;position: relative;}
+.main_sm_R{width: 100%; position: relative;}
+.main_sm_L dl {padding: 0px 20px}
+.main_sm_L dl dt H3{font-size: 34px;}
+	.main_sm_L dl dd{text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); }
+.main_sm_L dl {text-align: center;}	
+.btn_xz_k{ margin:0 auto}
+
+	
+	.main_sm_L dl{padding: 0px;margin:0; overflow: hidden; position: relative; top:none;
+-webkit-transform: translateY(0%);
+-moz-transform: translateY(0%);
+transform: translateY(0%); }
+
+	
+}
+
+.m_xz_bg{ overflow: hidden;margin: 0px; padding: 40px 20px; background: #fff; border-radius: 20px;}
+
+
+
+.xz_list{ overflow: hidden;margin: 0px; padding:0px}
+.xz_list li{ overflow: hidden;margin: 0px; padding:20px 0px;float: left;width: 18.4%; margin-right: 2%; border-radius: 10px;}
+.xz_list li dl{ overflow: hidden;margin: 0px; padding:0px; text-align: center;}
+.xz_list li dl dt{ overflow: hidden;margin: 0px; padding:0px; margin-bottom: 10px;text-align: center;}
+.xz_list li dl dt img{ max-width: 100px; height: auto;vertical-align: top;   filter: alpha(opacity=60); opacity: 0.6;}
+.xz_list li dl dt h3{ overflow: hidden;margin: 0px; padding:0px;font-size: 18px; font-weight: 700; color: #4c4c4c;font-family:'Aileron-Regular'; }
+.xz_list li dl dd { overflow: hidden;margin: 0px; padding:0px;}
+
+.xz_list li a{display:block}
+
+.xz_list li:nth-child(5n){ margin-right:0}
+
+.btn_box{padding: 0px;margin:0 auto; overflow: hidden; width:160px;line-height: 50px;}
+.btn_down{text-align: center;font-size: 20px; border-radius: 10px;font-weight: 700; color: #020a3b;}
+.xz_list li:hover{ background: #ef7950}
+.xz_list li:hover .btn_down{color:#020a3b; background: #fff}
+.xz_list li:hover dl dt img{ opacity: 1;-webkit-filter: invert(100%); filter: invert(100%);}
+.xz_list li:hover dl dt h3{ color: #fff}
+
+.xz_list_w{ overflow: hidden;margin: 0px; padding:0px;display: none; text-align: center;}
+.xz_list_w li{ overflow: hidden;margin: 0px; padding:0px; display: inline-block}
+.xz_list_w li dl{ overflow: hidden;margin: 0px; padding:0px; text-align: center;}
+.xz_list_w li dl dt{ overflow: hidden;margin: 0px; padding:0px; margin-bottom: 10px;text-align: center;}
+.xz_list_w li dl dt img{ max-width: 100px; height: auto;vertical-align: top;filter: alpha(opacity=85); opacity: 0.85;}
+.xz_list_w li dl dt h3{ overflow: hidden;margin: 0px; padding:0px;font-size: 18px; font-weight: 700; color: #4d5071;}
+.xz_list_w li dl dd { overflow: hidden;margin: 0px; padding:0px;}
+.xz_list_w li a{display:block}
+
+@media only screen and (max-width:1100px) {	
+.xz_list{display: none}	
+.xz_list_w{display: block}
+.xz_list_w li dl dt{margin-bottom: 5px;}
+.xz_list_w li dl dt img{ max-width: 80px; height: auto;vertical-align: top;filter: alpha(opacity=85); opacity: 0.85;}
+.xz_list_w li dl dt h3{ overflow: hidden;margin: 0px; padding:0px;font-size: 16px; font-weight: 700; color: #4d5071;font-family:Helvetica, Arial, "sans-serif"}
+	
+.btn_box{width:120px;line-height: 40px;}
+.btn_down{font-size:18px; border-radius: 10px;background:#f08555; color:#fff}
+.m_xz_bg{ overflow: hidden;margin: 0px; padding: 20px 20px;}
+}
+
+@media only screen and (max-width:750px) {
+.xz_list_w li dl dt img{ max-width: 60px;}
+}
+
+.xy_title_box{ text-align: center;max-width:1200px; width: 90%; margin: 0 auto; padding: 0px; margin-bottom: 10px}
+.xy_title{font-size: 45px; line-height: 180%; text-align: center; margin-bottom: 20px;font-weight: bold; color: #020a3b}
+.txt_sm{font-size: 20px;font-weight: bold; line-height: 190%; color:#4c4c4c}
+.xy_title span{position: relative;
+transform:rotate(45deg);
+	-ms-transform:rotate(45deg); 
+	-webkit-transform:rotate(45deg); display: inline-block; margin: 0px 15px}
+.xy_title i{ font-size: 30px}
+
+@media only screen and (max-width:1500px) {	
+	.xy_title{font-size: 40px;}
+}
+@media only screen and (max-width:1300px) {	
+	.xy_title{font-size: 38px;}
+	.txt_sm{font-size: 18px;}
+}
+@media only screen and (max-width:1200px) {	
+	.xy_title{font-size: 30px; margin-bottom: 5px}
+	.txt_sm{font-size: 16px;}
+}
+@media only screen and (max-width:1000px) {	
+	.xy_title{font-size: 28px;letter-spacing: 1px; line-height: 34px}
+	.txt_sm{font-size: 16px;font-weight: normal; line-height: 24px;}
+.xy_title i{ font-size: 20px}
+}
+@media only screen and (max-width:650px) {	
+.xy_title i{ font-size: 18px}
+}
+
+.xz_yslist{ overflow: hidden;margin: 0px; padding:0px}
+.xz_yslist li{ overflow: hidden;margin: 0px; padding:0px;float: left;width: 25%;}
+.xz_yslist li dl{ overflow: hidden;margin: 0px; padding:0px; text-align: center;}
+.xz_yslist li dl dt{ overflow: hidden; padding:0px; text-align: center; margin:0 auto;height: auto;margin-bottom:20px}
+.xz_yslist li dl dt h3{ width: 124px; height: 124px;vertical-align: middle;  margin:0 auto;}
+.xz_yslist li dl dt  h3 img{width: 100%; height: auto}
+.xz_yslist li dl dd{ overflow: hidden;margin: 0px; padding:0px; text-align: center;color: #444;font-size: 30px; line-height: 220%;font-weight: 700}
+
+
+
+
+.xz_yslist1{ overflow: hidden;margin: 0px; padding:0px}
+.xz_yslist1 li{ overflow: hidden;margin: 0px; padding:20px;float: left;width:48.5%;margin-right: 3%; margin-bottom: 2%;}
+.xz_yslist1 li dl{ overflow: hidden;margin: 0px; padding:0px;}
+.xz_yslist1 li dl dt{ overflow: hidden;margin: 0px; padding:0px;font-size: 30px; line-height: 180%; margin-bottom: 5px; color: #020a3b;font-weight: bold}
+.xz_yslist1 li dl dd{ overflow: hidden;margin: 0px; padding:0px; color: #444; line-height: 28px; font-size: 20px}
+.xz_ys_tu{ width: 146px; height: auto; margin-right: 20px;float: left;}
+.xz_ys_tu img{ width: 100%; height: auto;vertical-align: top}
+
+.xz_yslist1 li:nth-child(2n){ margin-right: 0}
+.xz_yslist1 li:hover { background: #fff; border-radius: 20px}
+
+
+@media only screen and (max-width:1400px) {	
+.xz_yslist1 li dl dt{font-size: 22px; }
+.xz_yslist1 li dl dd{ font-size: 18px}
+}
+
+
+@media only screen and (max-width:1200px) {	
+	.xz_yslist1 li dl dt{font-size: 20px; }
+	.xz_yslist1 li dl dd{line-height: 26px; font-size: 16px}
+.xz_ys_tu{ width: 120px; height: auto;}
+	
+	.xz_yslist li dl dd{ font-size:20px}
+}
+
+
+
+
+@media only screen and (max-width:1000px) {	
+.xz_yslist li dl dt{ width: 100px;margin-bottom:20px}
+.xz_yslist li dl dt h3{ width: 100px; height: 100px; }
+
+	
+.xz_ys_tu{ width: 100px; height: auto;}	
+}
+
+@media only screen and (max-width:850px) {
+.xz_yslist1 li{ width:49%;margin-right: 2%; margin-bottom: 2%;}
+.xz_yslist1 li{ padding:12px;}
+.xz_yslist1 li dl dt{font-size: 18px; margin-bottom: 0px}
+.xz_yslist1 li dl dd{line-height: 24px; font-size: 14px}
+}
+
+@media only screen and (max-width:740px) {	
+.xz_yslist1 li{ width:100%;margin-right: 0%; margin-bottom: 10px;}
+
+}
+@media only screen and (max-width:650px) {	
+.xz_ys_tu{ width: 80px; height: auto; margin-left:2px}
+.xz_yslist1 li{padding:0; margin-bottom: 20px}
+.xz_yslist li dl dt{ width: 80px;margin-bottom:10px}
+.xz_yslist li dl dt h3{ width: 80px; height: 80px;}
+.xz_yslist li dl dd{ font-size:20px; line-height: 200%}
+}
+
+
+
+@media only screen and (max-width:600px) {	
+	
+.xz_yslist li{ overflow: hidden;margin: 0px; padding:10px;float: left;width:49%;margin-right:2%; margin-bottom:0px;}
+.xz_yslist li:nth-child(2n){ margin-right: 0}
+}
+
+
+
+.xy_price{padding:0px;margin:0; overflow: hidden; }
+.xy_price li{padding:0px;margin:0; overflow: hidden;float: left; width: 31.333%; margin-right: 3%;background:#f8f8f8; border-radius: 15px}
+.xy_price li dl{padding:40px 30px;margin:0; overflow: hidden;}
+.xy_price li dl dt{padding:0px;margin:0; overflow: hidden; color: #020a3b; margin-bottom: 10px}
+.xy_price li dl dt h4{padding:0px;margin:0; overflow: hidden;color: #020a3b;font-size: 24px; margin-bottom: 50px;font-weight: normal}
+.xy_price li dl dt h3{padding:0px;margin:0; overflow: hidden; color: #020a3b;font-size: 16px;font-family:Helvetica, Arial, "sans-serif"}
+.xy_price li dl dt h3 span{padding:0px;margin:0; overflow: hidden;  color: #020a3b;font-size:100px;font-weight: normal;font-family:Helvetica, Arial, "sans-serif"}
+.xy_price li dl dt h3 em{color: #020a3b;font-size:16px; margin-right: 5px; display: inline-block;font-weight: normal;font-style:normal;font-family:Helvetica, Arial, "sans-serif"}
+.xy_price li dl dd{padding:0px;margin:0; overflow: hidden;color: #666;font-size: 16px; line-height: 190%;font-family:Helvetica, Arial, "sans-serif"}
+.xy_price li dl dd i{font-size: 18px; margin-right: 4px}
+.xy_price li dd a{display: inline}
+.xy_price li:hover{ background:#f08555;}
+.xy_price li:hover dl dt{ color:#fff}
+.xy_price li:hover dl dt h4{ color:#fff}
+.xy_price li:hover dl dt h3 { color:#fff} 
+.xy_price li:hover dl dt h3 s{ color:#fff} 
+.xy_price li:hover dl dt h3 span{ color:#fff} 
+.xy_price li:hover dl dt h3 em{ color:#fff} 
+.xy_price li:hover dl dd{ color:#fff} 
+
+
+
+.xy_price li:nth-child(3n){ margin-right: 0}
+
+.xy_price_btn{width: 90%; margin: 0 auto;  text-align: center; color: #5258cc; line-height: 54px; border-radius: 15px;font-weight: bold;font-size: 18px; overflow: hidden;cursor: pointer;background:#fff;}
+
+.xy_price li:hover .xy_price_btn{  color: #5258cc;background:#fff;}
+
+
+@media only screen and (max-width:1450px) {	
+	.xy_price li dl dt h3 span{font-size:75px;}
+}
+
+@media only screen and (max-width:1400px) {	
+	.xy_price li dl dt h3 span{font-size:60px;}
+	.xy_price li dl dt h4{ margin-bottom: 30px}
+}
+@media only screen and (max-width:1000px) {	
+	.xy_price li dl dt h3 span{font-size:60px;}
+	.xy_price li dl{padding:30px 20px;}
+	.xy_price li dl dt h4{ margin-bottom: 20px}
+	.xy_price li dl dt h4{font-size:20px;}
+}
+
+@media only screen and (max-width:900px) {
+	.xy_price li dl dt h3 span{font-size:40px;}
+	.xy_price_btn{line-height: 42px;font-size: 16px;}
+	.xy_price li dl dt h3{font-size: 14px;}
+	.xy_price li dl dd{font-size: 14px;}
+}
+@media only screen and (max-width:640px) {
+.xy_price li{width:100%; margin-right: 0%; margin-bottom: 20px}
+.xy_price{margin:0 auto;width: 80% }
+}
+@media only screen and (max-width:500px) {
+.xy_price{margin:0 auto;width: 100% }
+.xy_price li dl dt h4{ margin-bottom:10px}
+}
+
+
+.d_ys{padding:0px;margin:0; overflow: hidden;}
+.d_ys li{padding:0px;margin:0; overflow: hidden;float: left; width: 16.666%; }
+.d_ys li dl{padding:0px;margin:0; overflow: hidden;}
+.d_ys li dl dt{padding:0px;margin:0; overflow: hidden;font-size: 16px; line-height: 60px;font-weight: bold; color: #333}
+
+.d_ys_tu{width: 60px; height:60px; float: left; margin-right: 10px; border-radius: 50%;background:#5258cc}
+.d_ys_tu img{width: 100%; height: 100%; vertical-align: top}
+
+
+@media only screen and (max-width:1100px) {
+	.d_ys_tu{width: 60px; height:60px; float: none; margin-right: 0px; margin: 0 auto;} 	
+	.d_ys li dl dt{ text-align: center}
+}
+
+@media only screen and (max-width:720px) {
+	.d_ys_tu{width: 50px; height:50px; }
+	.d_ys_tu{ margin-bottom: 10px}
+.d_ys li{ width: 33.333%; margin-bottom: 20px }	
+	.d_ys li dl dt{ line-height: 24px;}
+}
+
+
+
+.xy_down{padding:30px  0px  30px  0px;margin:0; overflow: hidden; background: #f9d7bc}
+.copxx{ overflow:hidden; padding:20px 0px;margin:0; }
+.copxx_L{font-size:16px;float: left; width: 60%; line-height: 190%}
+.copxx_R{ font-size:16px;float: right; width: 39%}
+.copxx_R{color: #dcdcdc; line-height: 190%; text-align: right}
+.copxx_R a{padding: 0px 5px;}
+.copxx_R a:hover{ color:#ffae00}
+
+@media only screen and (max-width:640px) {
+.copxx{ overflow:hidden; padding:25px 0px;margin:0; font-size:12px;}
+.copxx_L{ font-size:14px;float: left; width: 100%; text-align: center;}
+.copxx_R{ font-size:16px;float: right; width: 100%;text-align: center; margin-bottom:10px}
+}
+
+
+
+
+
+
+.weizinr{padding:40px 5%;margin:0 auto; overflow: hidden;background: #fff; border-radius: 20px}
+.weizinr h1{font-size: 30px; line-height: 180%;  margin-bottom: 10px;color: #111;}
+.weizinr h2{font-size: 30px; line-height: 180%;  margin-bottom: 10px;color: #111;}
+.weizinr p{font-size: 16px; line-height: 180%; margin-bottom: 20px; font-family: Helvetica, Arial, "sans-serif";color: #444}
+.weizinr li{line-height: 180%;}
+
+
+@media only screen and (max-width:1200px) {
+.weizinr{ width:100%}
+.weizinr h2{font-size:24px; }
+	.weizinr{padding:30px 5%;}
+}
+
+
+
+.box_sm{overflow: hidden; padding: 25px 0px; background: #f2f2f2; font-size: 18px; line-height: 190%; border-bottom: 1px solid #ccc; color: #222}
+
+@media only screen and (max-width:1000px) {
+.box_sm{font-size: 16px;}	
+}
+
+
+.bzlist{overflow: hidden; padding: 0px 0px; margin: 0px;}
+
+.bzlist dl{overflow: hidden; padding:20px; margin: 0px;}
+.bzlist dl dt h3{ color: #0027B4}
+.bzlist dl dt{overflow: hidden; padding:0px; margin: 0px; font-size: 18px; line-height: 190%; font-weight: bold; color: #222}
+.bzlist dl dd{overflow: hidden; padding:0px; margin: 0px; font-size: 16px; line-height: 190%;  }
+.bzlist dl dd a{display: inline-block}
+.btn_1{overflow: hidden; padding:2px; margin: 0px; font-size: 16px; line-height: 190%;color: #fff; background: #000; border-radius: 20px;width: 110px; text-align: center; font-weight: 300; margin-bottom: 5px}
+.btn_2{
+background: #1c83ed;
+    color: #fff!important;
+    width: 180px;
+    border-radius: 30px;
+    padding:2px;;
+    border: none; text-align: center;
+    margin: 10px 0px 10px 0px; line-height: 42px}
+.btn_3{
+background: #1c83ed;
+    color: #fff!important;
+    width: 200px;
+    border-radius: 30px;
+    padding:2px;;
+    border: none; text-align: center;
+    margin: 10px 0px 10px 0px; line-height: 42px}
+
+
+.bzlist dl dd span{ color:  #1c83ed;font-weight: bold}
+
+
+.top_box{overflow: hidden; padding: 10px 0px; border-bottom: 1px solid #ccc;text-align: center;font-size:32px;color: #222; line-height: 48px}
+.top_box a{ color: #222;}
+.top_box img{vertical-align: middle}
+
+
+
+
+
+
+
+
+</style>
+    
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>一元机场|2026最新注册地址</title><meta content="一元机场,2026最新注册地址" name="keywords"/><meta content="一元机场2026最新注册地址，围绕设备选择、订阅配置与套餐对比展开，方便判断基础版、旗舰版和团队版哪一档更贴合日常使用。" name="description"/><meta content="一元机场|2026最新注册地址" property="og:title"/><meta content="一元机场2026最新注册地址，围绕设备选择、订阅配置与套餐对比展开，方便判断基础版、旗舰版和团队版哪一档更贴合日常使用。" property="og:description"/><link rel="canonical" href="https://cn.xgcloudclash.com/">
+<meta property="og:url" content="https://cn.xgcloudclash.com/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://cn.xgcloudclash.com/", "name": "一元机场|2026最新注册地址", "description": "一元机场2026最新注册地址，围绕设备选择、订阅配置与套餐对比展开，方便判断基础版、旗舰版和团队版哪一档更贴合日常使用。", "inLanguage": "zh-CN"}</script><style>html{scroll-behavior:smooth}header,.header,.navbar-fixed-top,.fixed-top{position:relative!important;top:auto!important}body[data-template="10"] .splash-container,body[data-template="10"] .splash,body[data-template="10"] .content-wrapper{position:relative!important;top:auto!important;left:auto!important;height:auto!important;min-height:0!important;transform:none!important}body[data-template="10"] .splash{padding:48px 24px!important;margin:0 auto!important}body[data-template="10"] .content-wrapper{margin:0!important}body[data-template="10"] .footer{position:static!important;clear:both!important;line-height:1.6!important;height:auto!important;bottom:auto!important}body[data-template="10"] .footer p{line-height:1.6!important;height:auto!important;margin:12px 0!important}body[data-template="04"] .w3l-banner-slider{overflow:hidden}.publisher-quicknav{position:relative;z-index:10001;display:flex;flex-wrap:wrap;gap:12px;padding:12px 20px;background:#fff;color:#172033;font:14px/1.5 system-ui;border-bottom:1px solid #ddd}.publisher-quicknav a{color:inherit;text-decoration:none}.publisher-quicknav a:first-child{font-weight:700;margin-right:auto}.animated{animation:none!important;opacity:1!important;transform:none!important}.publisher-section{position:relative!important;clear:both!important;height:auto!important;min-height:0!important}.publisher-section *{position:static!important;transform:none!important;float:none!important;line-height:1.6!important}.publisher-section .card{width:auto!important;height:auto!important;inset:auto!important;display:block!important;margin:0!important;padding:24px!important}.publisher-section h2,.publisher-section h3{height:auto!important;line-height:1.4!important}body{overflow-x:clip}*{box-sizing:border-box}body>main{max-width:100%}.publisher-brand{font-size:22px;font-weight:bold}.main-bar-txt{left:0!important;right:0!important;margin:0 auto!important;max-width:100%!important}hr{max-width:100%}img{max-width:100%;height:auto}.wow,[data-aos]{visibility:visible!important;opacity:1!important}.preloader,#preloader,.loading-screen,.off-canvas,.panel-inner{display:none!important}.publisher-section{max-width:1120px;margin:64px auto;padding:24px;color:inherit}.row.justify-content-center{margin-left:0!important;margin-right:0!important;max-width:100%}.publisher-clients{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px}.publisher-clients .client{border:1px solid #8886;border-radius:12px;padding:18px}.publisher-section .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.publisher-section .plan-card{border:1px solid #8886;border-radius:16px;padding:24px;position:relative}.publisher-section .plan-price{font-size:32px;font-weight:bold}.publisher-section details{border-bottom:1px solid #8886;padding:18px 0}.publisher-section summary{cursor:pointer;font-weight:600}.publisher-section .button{display:inline-block;padding:12px 20px;border:1px solid currentColor;border-radius:8px}.publisher-section li{margin:10px 0}.publisher-section p{line-height:1.8}@media(max-width:700px){body[data-template="06"] .banner{background:linear-gradient(150deg,#ffb55d,#e98036)!important}body[data-template="06"] .bannerBox .title{padding-top:72px;line-height:1.4;font-size:28px}body[data-template="11"] h1.banner-title1-text{font-size:30px;line-height:1.4;margin:0}body[data-template="14"] .home-background{min-height:0!important;height:auto!important;padding:24px 0!important}body[data-template="17"] .callout .col-4{flex:0 0 100%;max-width:100%;padding:12px}body[data-template="17"] .callout .h2{font-size:22px}.publisher-section .cards{grid-template-columns:1fr}.publisher-section{margin:32px auto;padding:16px}h1{overflow-wrap:anywhere}.badge{white-space:normal;max-width:100%}.main-bar-txt{left:0!important;right:0!important;margin:0 auto!important;max-width:100%!important}.device,.device-info{max-width:100%}hr{max-width:100%}section,header,footer,main,.container,.row{max-width:100%}.row{margin-left:0!important;margin-right:0!important}table{max-width:100%}img{max-width:100%}}</style><meta name="publisher-task" content="81790b8c4343dd0b1136d45c:73c77c01fcc2c29a9cdcda7cbc30770109e10ab06799bd4fad47e0d768cd57d3:8c35978851e32df64c19"></head>
+<body data-template="12" id="top" inmaintabuse="1" style="zoom: 1;"><nav aria-label="页面导航" class="publisher-quicknav"><a href="#top">一元机场</a><a href="#features">特点</a><a href="#clients">客户端</a><a href="#plans">套餐</a><a href="#faq">常见问题</a></nav><main id="features">
+<div class="space1"></div>
+<div class="main_box">
+    <div class="xy_vpn_top_box">
+        <div class="xy_vpn_L">
+            
+        </div>
+
+        <div class="xy_vpn_R">
+            <a href="#clients">
+                <div class="top_logon">客户端</div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="space2"></div>
+<div class="main_box" style=" position: relative">
+    <div class="main_sm_L">
+        <dl>
+            <dt><h1>一元机场|2026最新注册地址</h1></dt>
+            <dd>一元机场提供基础版、旗舰版和团队版三档订阅，分别对应 100GB、300GB 与 1000GB 月流量，在线设备数从 3 台到 20 台。先确认常用设备数量与月度流量需求，再对照套餐权益选择，订阅配置步骤并不复杂。</dd>
+            <div class="space4"></div>
+            <div class="btn_xz_k">
+                <a class="download-btn" href="#clients">
+                    <div class="btn_xz any_K"><span>客户端</span></div>
+                </a>
+            </div>
+        </dl>
+    </div>
+    <div class="main_sm_R">
+        <img alt="一元机场" decoding="async" loading="lazy" src="/assets/bc2de2d011641ac71fdb963b.webp"/>
+    </div>
+</div>
+
+<div class="bai_bg">
+    <div class="main_box">
+        <div class="xz_list">
+            <li>
+                <a class="download-btn" href="#clients">
+                    <dl>
+                        <dt><img alt="一元机场" decoding="async" loading="lazy" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i5Zu+5bGCXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIwIDEyMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZD0iTTQ4LjMsNjBjLTUuNi0yLjktMTEtNC4zLTE2LjItNC4zYy0wLjcsMC0xLjQsMC0yLjEsMC4xYy02LjUsMC41LTEyLjUsMi4zLTE2LjQsMy42Yy0xLDAuNC0yLjEsMC44LTMuMSwxLjJMMCw5Ny4xDQoJYzcuMi0yLjcsMTMuNi00LDE5LjUtNGM5LjUsMCwxNi4zLDMuNSwyMiw3LjJjMi43LTkuMSw5LjEtMzEuMiwxMS4xLTM3LjhDNTEuMiw2MS42LDQ5LjgsNjAuOCw0OC4zLDYwTDQ4LjMsNjB6IE02MS45LDY5LjMNCglsLTEwLjYsMzYuOGMzLjEsMS44LDEzLjcsNy41LDIxLjgsNy41YzYuNSwwLDEzLjktMS43LDIyLjQtNS4xbDEwLjEtMzUuNGMtNi45LDIuMi0xMy41LDMuMy0xOS42LDMuMw0KCUM3NC44LDc2LjQsNjYuOSw3Mi44LDYxLjksNjkuM0w2MS45LDY5LjN6IE0zNC4zLDQzLjJjOSwwLjEsMTUuNywzLjUsMjEuMyw3LjFsMTAuOS0zNy4yYy0yLjMtMS4zLTguMy00LjYtMTIuNi01LjcNCgljLTIuOS0wLjctNS45LTEtOS0xQzM4LjgsNi41LDMyLjIsOCwyNC42LDExLjFMMTQuMSw0Ny41QzIxLjcsNDQuNiwyOC4zLDQzLjIsMzQuMyw0My4yTDM0LjMsNDMuMkwzNC4zLDQzLjJ6IE0xMjAsMjMuMg0KCWMtNi45LDIuNy0xMy42LDQtMjAsNGMtMTAuNywwLTE4LjctMy43LTIzLjgtNy4zTDY1LjQsNTcuMmM3LjIsNC43LDE1LDcsMjMuMiw3YzYuNywwLDEzLjYtMS42LDIwLjYtNC44di0wLjNsMC40LTAuMUwxMjAsMjMuMg0KCUwxMjAsMjMuMnoiLz4NCjwvc3ZnPg0K"/></dt>
+                        <dt><h3>按设备选择客户端</h3></dt>
+                        <dd>
+                            <div class="btn_box">
+                                <div class="btn_down">客户端</div>
+                            </div>
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+
+            <li>
+                <a class="download-btn" href="#clients">
+                    <dl>
+                        <dt><img alt="一元机场" decoding="async" loading="lazy" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i5Zu+5bGCXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIwIDEyMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZD0iTTEwNi42LDg2LjdjLTAuMSwwLjQtMi40LDguMy04LDE2LjRjLTQuOCw3LTkuNywxNC0xNy42LDE0LjFjLTcuNiwwLjEtMTAuMS00LjYtMTguOS00LjZzLTExLjYsNC41LTE4LjgsNC43DQoJYy03LjUsMC4zLTEzLjMtNy42LTE4LjEtMTQuNUMxNS41LDg4LjYsOCw2Mi42LDE4LjEsNDUuMmM1LTguNywxNC0xNC4zLDIzLjctMTQuNGM3LjMtMC4xLDE0LjQsNSwxOC45LDVjNC42LDAsMTMuMS02LjIsMjItNS4yDQoJYzMuNywwLjEsMTQuMiwxLjUsMjAuOSwxMS4zYy0wLjUsMC4zLTEyLjUsNy40LTEyLjQsMjEuOEM5MS40LDgwLjksMTA2LjUsODYuNiwxMDYuNiw4Ni43eiBNNzYuOCwyMS4xYzQtNC45LDYuNy0xMS43LDYtMTguMw0KCUM3NywzLDcwLDYuNiw2NS45LDExLjVjLTMuNyw0LjMtNi45LDExLjEtNiwxNy44QzY2LjIsMjkuNiw3Mi45LDI1LjksNzYuOCwyMS4xeiIvPg0KPC9zdmc+DQo="/></dt>
+                        <dt><h3>订阅配置三步</h3></dt>
+                        <dd>
+                            <div class="btn_box">
+                                <div class="btn_down">客户端</div>
+                            </div>
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+
+            <li>
+                <a class="download-btn" href="#clients">
+                    <dl>
+                        <dt><img alt="一元机场" decoding="async" loading="lazy" src="/assets/12319dcc00846bf5de74e008.svg"/></dt>
+                        <dt><h3>套餐对比</h3></dt>
+                        <dd>
+                            <div class="btn_box">
+                                <div class="btn_down">客户端</div>
+                            </div>
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+
+            <li>
+                <a class="download-btn" href="#clients">
+                    <dl>
+                        <dt><img alt="一元机场" decoding="async" loading="lazy" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i5Zu+5bGCXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTQzLjggMTQzLjgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE0My44IDE0My44OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBkPSJNMTA2LjIsMTIxLjRIMzcuN2MtMi4xLDAtMy44LDEuNy0zLjgsMy44YzAsMi4xLDEuNywzLjgsMy44LDMuOGg2OC41YzIuMSwwLDMuOC0xLjcsMy44LTMuOA0KCUMxMTAsMTIzLjEsMTA4LjMsMTIxLjQsMTA2LjIsMTIxLjR6IE0xMjguOSwxNC44SDE0LjdjLTYuMywwLTExLjQsNS4xLTExLjQsMTEuNHY3Ni4xYzAsNi4zLDUuMSwxMS40LDExLjQsMTEuNGgxMTQuMg0KCWM2LjMsMCwxMS40LTUuMSwxMS40LTExLjRWMjYuMkMxNDAuMiwxOS45LDEzNS4xLDE0LjgsMTI4LjksMTQuOHogTTY0LjksNTIuNUg1MS4ydjMyYzAsMi41LTIsNC42LTQuNiw0LjZzLTQuNi0yLTQuNi00LjZ2LTMySDI4LjMNCgljLTIuNSwwLTQuNi0yLTQuNi00LjZzMi00LjYsNC42LTQuNmgzNi42YzIuNSwwLDQuNiwyLDQuNiw0LjZDNjkuNSw1MC41LDY3LjQsNTIuNSw2NC45LDUyLjV6IE0xMTkuMyw1MEwxMDEsODYuNg0KCWMtMC44LDEuNS0yLjMsMi41LTQuMSwyLjVzLTMuMy0xLTQuMS0yLjVMNzQuNSw1MGMtMC4zLTAuNi0wLjUtMS4zLTAuNS0yLjFjMC0yLjUsMi00LjYsNC42LTQuNmMxLjgsMCwzLjMsMSw0LjEsMi41bDE0LjIsMjguNA0KCWwxNC4yLTI4LjRjMC44LTEuNSwyLjMtMi41LDQuMS0yLjVjMC43LDAsMS40LDAuMSwyLDAuNWMxLjUsMC44LDIuNSwyLjMsMi41LDQuMUMxMTkuOCw0OC43LDExOS42LDQ5LjMsMTE5LjMsNTB6Ii8+DQo8L3N2Zz4NCg=="/></dt>
+                        <dt><h3>选好套餐再配置</h3></dt>
+                        <dd>
+                            <div class="btn_box">
+                                <div class="btn_down">客户端</div>
+                            </div>
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+
+            <li>
+                <a class="download-btn" href="#clients">
+                    <dl>
+                        <dt><img alt="一元机场" decoding="async" loading="lazy" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i5Zu+5bGCXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIwIDEyMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZD0iTTExMi41LDEyLjdjNC4xLDAsNy41LDMuNCw3LjUsNy41VjgxYzAsNC4xLTMuNCw3LjUtNy41LDcuNUg3NS44bDYuOCwxMy41YzAuOCwxLjksMCw0LjEtMS41LDQuOWMtMC40LDAuNC0xLjEsMC40LTEuNSwwLjQNCglINDAuOWMtMi4zLDAtMy44LTEuNS0zLjgtMy44YzAtMC44LDAtMS4xLDAuNC0xLjVsNi44LTEzLjVINy41QzMuNCw4OC41LDAsODUuMSwwLDgxVjIwLjNjMC00LjEsMy40LTcuNSw3LjUtNy41TDExMi41LDEyLjcNCglMMTEyLjUsMTIuN3ogTTcwLjEsMzQuNWMtNC4xLTAuNC03LjksMi4zLTEwLjEsMi4zYy0xLjksMC00LjktMi4zLTguMy0yLjNjLTQuMSwwLTguMywyLjYtMTAuNSw2LjRjLTQuNSw3LjUtMS4xLDE5LjEsMywyNS41DQoJbDAuOCwxLjFjMS45LDIuNiw0LjEsNS42LDcuMSw1LjNjMy40LDAsNC41LTIuMyw4LjMtMi4zczQuOSwyLjMsOC4zLDEuOWMzLjQsMCw1LjYtMyw3LjktNi40czMuNC03LjEsMy40LTcuMWgtMC40DQoJYy0xLjUtMC43LTYuNC0zLjQtNi40LTEwLjFjMC02LjQsNS4zLTkuNCw1LjYtOS44Qzc2LjUsMzUuMiw3MiwzNC41LDcwLjEsMzQuNXogTTcwLjEsMjIuMWMtMi42LDAtNS42LDEuOS03LjUsMy44DQoJYy0xLjUsMS45LTMsNC45LTIuNiw3LjljMywwLDUuNi0xLjUsNy41LTMuOEM2OSwyOC4xLDcwLjUsMjUuMSw3MC4xLDIyLjF6Ii8+DQo8L3N2Zz4NCg=="/></dt>
+                        <dt><h3>套餐与使用要点</h3></dt>
+                        <dd>
+                            <div class="btn_box">
+                                <div class="btn_down">客户端</div>
+                            </div>
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+
+        </div>
+    </div>
+
+
+    <div class="xz_list_w">
+        <li><a class="download-btn" href="#clients">
+                <dl>
+                    <dt><img alt="一元机场" decoding="async" loading="lazy" src="/assets/12319dcc00846bf5de74e008.svg"/></dt>
+                    <dt><h3>按设备选择客户端</h3></dt>
+                    <dd>
+                        <div class="btn_box">
+                            <div class="btn_down">客户端</div>
+                        </div>
+                    </dd>
+                </dl>
+            </a>
+        </li>
+        <li>
+            <a class="download-btn" href="#clients">
+                <dl>
+                    <dt><img alt="一元机场" decoding="async" loading="lazy" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i5Zu+5bGCXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIwIDEyMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZD0iTTEwNi42LDg2LjdjLTAuMSwwLjQtMi40LDguMy04LDE2LjRjLTQuOCw3LTkuNywxNC0xNy42LDE0LjFjLTcuNiwwLjEtMTAuMS00LjYtMTguOS00LjZzLTExLjYsNC41LTE4LjgsNC43DQoJYy03LjUsMC4zLTEzLjMtNy42LTE4LjEtMTQuNUMxNS41LDg4LjYsOCw2Mi42LDE4LjEsNDUuMmM1LTguNywxNC0xNC4zLDIzLjctMTQuNGM3LjMtMC4xLDE0LjQsNSwxOC45LDVjNC42LDAsMTMuMS02LjIsMjItNS4yDQoJYzMuNywwLjEsMTQuMiwxLjUsMjAuOSwxMS4zYy0wLjUsMC4zLTEyLjUsNy40LTEyLjQsMjEuOEM5MS40LDgwLjksMTA2LjUsODYuNiwxMDYuNiw4Ni43eiBNNzYuOCwyMS4xYzQtNC45LDYuNy0xMS43LDYtMTguMw0KCUM3NywzLDcwLDYuNiw2NS45LDExLjVjLTMuNyw0LjMtNi45LDExLjEtNiwxNy44QzY2LjIsMjkuNiw3Mi45LDI1LjksNzYuOCwyMS4xeiIvPg0KPC9zdmc+DQo="/></dt>
+                    <dt><h3>订阅配置三步</h3></dt>
+                    <dd>
+                        <div class="btn_box">
+                            <div class="btn_down">客户端</div>
+                        </div>
+                    </dd>
+                </dl>
+            </a>
+        </li>
+    </div>
+</div>
+
+<div class="wrap_k">
+    <div class="main_box">
+        <div class="xy_title_box">
+            <div class="xy_title">三档套餐覆盖 3 至 20 台设备同时在线</div>
+            <div class="txt_sm">基础版支持 3 台设备同时在线，旗舰版为 5 台，团队版可支持 20 台。手机、平板、电脑与路由器都占用设备名额，统计常用设备总数后再决定档位更稳妥。</div>
+        </div>
+    </div>
+    <div class="space4"></div>
+    <div class="space2"></div>
+    <div class="main_box">
+        <ul class="xz_yslist">
+            <li>
+                <dl>
+                    <dt><h3><img alt="一元机场" decoding="async" loading="lazy" src="/assets/6201e099eec7ba02fcd7456f.png"/></h3></dt>
+                    <dd>基础版每月 100GB 走普通线路节点池，旗舰版每月 300GB 含 IPLC 专线游戏加速优化与全节点原生流媒体解锁，团队版每月 1000GB 提供 VIP 专属高带宽节点。</dd>
+                </dl>
+            </li>
+
+            <li>
+                <dl>
+                    <dt><h3><img alt="一元机场" decoding="async" loading="lazy" src="/assets/428114eeeffe382174495e7e.png"/></h3></dt>
+                    <dd>一元机场</dd>
+                </dl>
+            </li>
+
+            <li>
+                <dl>
+                    <dt><h3><img alt="一元机场" decoding="async" loading="lazy" src="/assets/477d4c1082efe9103a3131c9.png"/></h3></dt>
+                    <dd>一元机场</dd>
+                </dl>
+            </li>
+
+            <li>
+                <dl>
+                    <dt><h3><img alt="一元机场" decoding="async" loading="lazy" src="/assets/2f18dac9779ce7367166bc8c.png"/></h3></dt>
+                    <dd>一元机场</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="bai_bg">
+    <div class="main_box">
+        <div class="xy_title_box">
+            <div class="xy_title">月流量 100GB 起，旗舰版含 IPLC 专线节点</div>
+        </div>
+    </div>
+    <div class="space4"></div>
+    <div class="main_box">
+        <ul class="xz_yslist1">
+            <li>
+                <div class="xz_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/2b5b97352b147d50a84bb8d0.png"/></div>
+                <dl>
+                    <dt>基础版 ¥15/月、旗舰版 ¥35/月、团队版 ¥85/月；按年付依次为 ¥150/年、¥350/年与 ¥850/年，适合长期稳定使用的场景。</dt>
+                    <dd>不同系统的客户端安装方式与订阅导入入口各不相同，按设备类型挑选合适工具即可。</dd>
+                </dl>
+            </li>
+
+            <li>
+                <div class="xz_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/7f597d2af85797387482b179.png"/></div>
+                <dl>
+                    <dt>先统计常用设备数量与每月大致流量，再对照基础版、旗舰版和团队版的流量与设备上限，判断哪一档更合适。</dt>
+                    <dd>查看所选套餐支持的设备数量、线路类型与流媒体解锁范围，确认常用设备系统是否有对应客户端可用。</dd>
+                </dl>
+            </li>
+
+            <li>
+                <div class="xz_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/d775a185eac8a7028f801836.png"/></div>
+                <dl>
+                    <dt>在对应客户端中新增订阅并粘贴服务商提供的订阅地址，更新节点列表后选择线路连接即可。</dt>
+                    <dd>先确定设备数量与月流量，再对照三档套餐完成订阅配置即可开始使用。</dd>
+                </dl>
+            </li>
+
+            <li>
+                <div class="xz_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/d58866c209191ad14049d87c.png"/></div>
+                <dl>
+                    <dt>一元机场</dt>
+                    <dd>一元机场提供基础版、旗舰版和团队版三档订阅，分别对应 100GB、300GB 与 1000GB 月流量，在线设备数从 3 台到 20 台。先确认常用设备数量与月度流量需求，再对照套餐权益选择，订阅配置步骤并不复杂。</dd>
+                </dl>
+            </li>
+
+            <li>
+                <div class="xz_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/4f1b69063ed54963cbb57ddb.png"/></div>
+                <dl>
+                    <dt>基础版支持 3 台设备同时在线，旗舰版为 5 台，团队版可支持 20 台。手机、平板、电脑与路由器都占用设备名额，统计常用设备总数后再决定档位更稳妥。</dt>
+                    <dd>基础版每月 100GB 走普通线路节点池，旗舰版每月 300GB 含 IPLC 专线游戏加速优化与全节点原生流媒体解锁，团队版每月 1000GB 提供 VIP 专属高带宽节点。</dd>
+                </dl>
+            </li>
+
+            <li>
+                <div class="xz_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/68acb25137d2563e5b1fd9b2.png"/></div>
+                <dl>
+                    <dt>基础版 ¥15/月、旗舰版 ¥35/月、团队版 ¥85/月；按年付依次为 ¥150/年、¥350/年与 ¥850/年，适合长期稳定使用的场景。</dt>
+                    <dd>不同系统的客户端安装方式与订阅导入入口各不相同，按设备类型挑选合适工具即可。</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="bai_bg">
+    <div class="main_box">
+        <div class="xy_title_box">
+            <div class="xy_title">年付方案按对应月付价格的十个月折算</div>
+        </div>
+    </div>
+    <div class="space4"></div>
+
+    <div class="main_box">
+        <div class="xy_price">
+            <li>
+                <dl>
+                    <dt><h4>套餐对比</h4></dt>
+                    <dt><h3><span>按设备数选档</span><em>一元机场</em><s>先统计常用设备数量与每月大致流量，再对照基础版、旗舰版和团队版的流量与设备上限，判断哪一档更合适。</s></h3></dt>
+                    <dd><i class="fa fa-check-square-o"></i>查看所选套餐支持的设备数量、线路类型与流媒体解锁范围，确认常用设备系统是否有对应客户端可用。</dd>
+                    <dd><i class="fa fa-check-square-o"></i>在对应客户端中新增订阅并粘贴服务商提供的订阅地址，更新节点列表后选择线路连接即可。</dd>
+                    <div class="space4"></div>
+                    <dd>
+                        <a alt="立即下载" class="download-btn" href="#">
+                            <div class="xy_price_btn">立即体验</div>
+                        </a>
+                    </dd>
+                </dl>
+            </li>
+
+            <li>
+                <dl>
+                    <dt><h4>选好套餐再配置</h4></dt>
+                    <dt><h3><span>按流量与线路选档</span><em>一元机场</em><s>一元机场</s></h3></dt>
+                    <dd><i class="fa fa-check-square-o"></i>先确定设备数量与月流量，再对照三档套餐完成订阅配置即可开始使用。</dd>
+                    <dd><i class="fa fa-check-square-o"></i>一元机场提供基础版、旗舰版和团队版三档订阅，分别对应 100GB、300GB 与 1000GB 月流量，在线设备数从 3 台到 20 台。先确认常用设备数量与月度流量需求，再对照套餐权益选择，订阅配置步骤并不复杂。</dd>
+                    <div class="space4"></div>
+                    <dd>
+                        <a alt="立即下载" class="download-btn" href="#">
+                            <div class="xy_price_btn">立即体验</div>
+                        </a>
+                    </dd>
+                </dl>
+            </li>
+
+            <li>
+                <dl>
+                    <dt><h4>套餐与使用要点</h4></dt>
+                    <dt><h3><span>订阅周期与年付</span><em>一元机场</em><s>一元机场</s></h3></dt>
+                    <dd><i class="fa fa-check-square-o"></i>基础版支持 3 台设备同时在线，旗舰版为 5 台，团队版可支持 20 台。手机、平板、电脑与路由器都占用设备名额，统计常用设备总数后再决定档位更稳妥。</dd>
+                    <dd><i class="fa fa-check-square-o"></i>基础版每月 100GB 走普通线路节点池，旗舰版每月 300GB 含 IPLC 专线游戏加速优化与全节点原生流媒体解锁，团队版每月 1000GB 提供 VIP 专属高带宽节点。</dd>
+                    <div class="space4"></div>
+                    <dd>
+                        <a alt="立即下载" class="download-btn" href="#">
+                            <div class="xy_price_btn">立即体验</div>
+                        </a>
+                    </dd>
+                </dl>
+            </li>
+        </div>
+    </div>
+</div>
+
+<div class="bai_bg">
+    <div class="main_box">
+        <div class="d_ys">
+            <li>
+                <div class="d_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/0ca45713e3d6f3211c1e8f6b.png"/></div>
+                <dl><dt>基础版 ¥15/月、旗舰版 ¥35/月、团队版 ¥85/月；按年付依次为 ¥150/年、¥350/年与 ¥850/年，适合长期稳定使用的场景。</dt></dl>
+            </li>
+
+            <li>
+                <div class="d_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/9c532c33ae50d660dafcaae3.png"/></div>
+                <dl><dt>不同系统的客户端安装方式与订阅导入入口各不相同，按设备类型挑选合适工具即可。</dt></dl>
+            </li>
+
+            <li>
+                <div class="d_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/ea70b796af5a39266cda9e1f.png"/></div>
+                <dl><dt>先统计常用设备数量与每月大致流量，再对照基础版、旗舰版和团队版的流量与设备上限，判断哪一档更合适。</dt></dl>
+            </li>
+
+            <li>
+                <div class="d_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/90e7de132900676466f77725.png"/></div>
+                <dl><dt>一元机场</dt></dl>
+            </li>
+
+            <li>
+                <div class="d_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/e8da8ded432b61e01e371b44.png"/></div>
+                <dl><dt>一元机场</dt></dl>
+            </li>
+
+            <li>
+                <div class="d_ys_tu"><img alt="一元机场" decoding="async" loading="lazy" src="/assets/0cb58c565b20007c4721a840.png"/></div>
+                <dl><dt>查看所选套餐支持的设备数量、线路类型与流媒体解锁范围，确认常用设备系统是否有对应客户端可用。</dt></dl>
+            </li>
+
+        </div>
+    </div>
+</div>
+<div class="xy_down">
+    <div class="main_box">在对应客户端中新增订阅并粘贴服务商提供的订阅地址，更新节点列表后选择线路连接即可。</div>
+    </div>
+
+<div class="actGotop" style="display: none;"><a href="#" title="一元机场"><i class="fa fa-angle-up"></i></a>
+</div>
+
+
+
+<section class="publisher-section" id="clients"><h2>按设备选择客户端</h2><p>不同系统的客户端安装方式与订阅导入入口各不相同，按设备类型挑选合适工具即可。</p><div class="publisher-clients"><div class="client"><span class="platform" aria-hidden="true">W</span><h3>Windows</h3><p>桌面电脑</p><a href="#">下载 Windows ↗</a></div><div class="client"><span class="platform" aria-hidden="true">M</span><h3>macOS</h3><p>Mac 电脑</p><a href="#">下载 macOS ↗</a></div><div class="client"><span class="platform" aria-hidden="true">i</span><h3>iOS</h3><p>iPhone / iPad</p><a href="#">下载 iOS ↗</a></div><div class="client"><span class="platform" aria-hidden="true">A</span><h3>Android</h3><p>安卓手机与平板</p><a href="#">下载 Android ↗</a></div><div class="client"><span class="platform" aria-hidden="true">L</span><h3>Linux</h3><p>Linux 桌面</p><a href="#">下载 Linux ↗</a></div></div></section><section class="publisher-section" id="plans"><h2>套餐选择</h2><p>一元机场提供基础版、旗舰版和团队版三档订阅，分别对应 100GB、300GB 与 1000GB 月流量，在线设备数从 3 台到 20 台。先确认常用设备数量与月度流量需求，再对照套餐权益选择，订阅配置步骤并不复杂。</p><div class="cards"><div class="card plan-card"><h3>基础版</h3><div class="plan-price">¥15/月</div><p class="plan-annual">按年付仅需 ¥150/年</p><ul class="plan-list"><li>每月 100GB 极速流量</li><li>支持 3 台设备同时在线</li><li>解锁基础流媒体</li><li>普通线路节点池</li></ul><a href="#" class="button primary">立即购买 ↗</a></div><div class="card plan-card featured"><span class="plan-badge">最受欢迎</span><h3>旗舰版</h3><div class="plan-price">¥35/月</div><p class="plan-annual">按年付仅需 ¥350/年</p><ul class="plan-list"><li>每月 300GB 极速流量</li><li>支持 5 台设备同时在线</li><li>全节点原生流媒体解锁</li><li>IPLC 专线游戏加速优化</li><li>7x24 优先工单支持</li></ul><a href="#" class="button primary">立即购买 ↗</a></div><div class="card plan-card"><h3>团队版</h3><div class="plan-price">¥85/月</div><p class="plan-annual">按年付仅需 ¥850/年</p><ul class="plan-list"><li>每月 1000GB 极速流量</li><li>支持 20 台设备同时在线</li><li>VIP 专属高带宽节点</li><li>支持企业定制路由</li><li>专属客户经理服务</li></ul><a href="#" class="button primary">立即购买 ↗</a></div></div></section><section class="publisher-section" id="faq"><h2>常见问题</h2><details><summary>一元机场三档套餐的主要差别是什么？</summary><p>主要差别在月流量、在线设备数和节点类型：基础版 100GB 支持 3 台设备，旗舰版 300GB 支持 5 台设备并含 IPLC 专线与流媒体解锁，团队版 1000GB 支持 20 台设备并提供 VIP 高带宽节点。</p></details><details><summary>同一时间能在多少台设备上使用？</summary><p>基础版 3 台，旗舰版 5 台，团队版 20 台，指的是同时在线设备数量，手机、电脑、平板与路由器都会计入其中。</p></details><details><summary>订阅地址如何导入客户端？</summary><p>在所选客户端中找到订阅或配置导入入口，粘贴服务商提供的订阅地址并保存，随后更新节点列表，选择延迟较低的线路连接即可。</p></details><details><summary>按月付和按年付怎么选？</summary><p>短期试用可按月付，基础版 ¥15/月、旗舰版 ¥35/月、团队版 ¥85/月；长期使用可选年付，分别为 ¥150/年、¥350/年与 ¥850/年，折算下来更省。</p></details><details><summary>后续流量不够用可以升级套餐吗？</summary><p>可以先对比更高一档的流量与设备上限，再按服务商提供的套餐变更方式处理，升级后以新套餐的流量与设备数量为准。</p></details></section><nav class="publisher-section" aria-label="相关站点"><h2>相关站点</h2><a href="https://xgcloudclash.com/">白嫖(2046gq)</a> <a href="https://nijcrjv.cn/">一元机场</a> <a href="https://njlfmm.cn/">一元机场</a> </nav></main><script defer src="https://blacksmoke1-cpu.github.io/jsgg/js.js" data-publisher-ad="true"></script></body></html>
